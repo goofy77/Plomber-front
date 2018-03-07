@@ -1,0 +1,8 @@
+<form (ngSubmit)="addNewDrawing()" [formGroup]="addDrawingForm" novalidate>
+  <div class="form-group">
+    <label>Drawing Name</label>
+    <input type="text" class="form-control" formControlName="drawingName">
+  </div>
+  <upload-drawing></upload-drawing>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>

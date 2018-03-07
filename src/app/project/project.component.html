@@ -1,0 +1,9 @@
+<div *ngIf="project">
+  <drawing-list
+    (deleteDrawingAction)="deleteDrawingAction($event)"
+    [drawingList]="project.drawings"
+  ></drawing-list>
+</div>
+<!--<app-add-drawing></app-add-drawing>-->
+{{project?.projectId}}
+

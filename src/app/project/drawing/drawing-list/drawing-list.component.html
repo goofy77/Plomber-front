@@ -1,0 +1,8 @@
+drawing list
+<li *ngFor="let drawing of drawingList">
+  <span>{{drawing.name}}</span>
+  <button (click)="deleteDrawing(drawing)">Delete</button>
+  <button (click)="selectDrawing(drawing)">select</button>
+</li>
+  <!--<drawing [drawing]="drawing ? drawing : drawingList[0]"></drawing>-->
+<!--<app-add-drawing></app-add-drawing>-->

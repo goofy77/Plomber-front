@@ -1,0 +1,7 @@
+<ul class="project-list">
+  <li *ngFor="let project of projectList | async">
+    <span (click)="selectedProject(project)">Project name: {{project.projectName}}</span>
+    <button (click)="deleteProject(project)">delete</button>
+  </li>
+</ul>
+<project [project]="project | async"></project>

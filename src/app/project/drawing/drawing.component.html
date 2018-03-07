@@ -1,0 +1,21 @@
+drawing component
+<button (click)="goBack()">back</button>
+<div *ngIf="drawing">
+  <!--<button (click)="zoomIn()">Zoom In</button>-->
+  <!--<button (click)="zoomOut()">Zoom Out</button>-->
+  <button *ngIf="!drawing.rotated" (click)="rotateView()">Rotate</button>
+  <button *ngIf="!drawing.rotated" (click)="updateDrawing()">Save</button>
+  <pdf-viewer
+    id="drawing"
+    [src]="getUrl()"
+    [page]="page"
+    [original-size]="true"
+    style="display: block;"
+    [zoom]="getZoom()"
+    [render-text]="false"
+    (click)="getCoordinates($event)"
+    [rotation]="getRotation()"
+  ></pdf-viewer>
+  <defect style="position: absolute" *ngFor="let cmp of components" [info]="cmp"></defect>
+</div>
+  <defect-creator [drawing]="drawing" [coordinates]="currentCoordinates"></defect-creator>

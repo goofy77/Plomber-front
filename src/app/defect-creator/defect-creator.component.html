@@ -1,0 +1,14 @@
+<popup (confirmClick)="submit()">
+  <form [formGroup]="defectForm" novalidate>
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class="form-control" formControlName="description">
+      <label>Drawing Name</label>
+      <select type="text" class="form-control" formControlName="defectType">
+        <option value="CONTRACTOR">Contractor</option>
+        <option value="DESIGN">Design</option>
+      </select>
+      <input type="file" #fileInput>
+    </div>
+  </form>
+</popup>
